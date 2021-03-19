@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block Title %} Amol Chaudhari {% endblock Title %}
+
+{% block Body %} 
+<div class="container my-4">
+    <form action="form" method="GET">
+	<article class="blog-post">
+        <h2 class="blog-post-title">Attention is All You Need</h2>
+        <p class="blog-post-meta">December 6, 2017 by <a href="#">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin</a></p>
+
+        <p>The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.</p>
+        
+    </article>
+    <button class="btn btn-outline-primary" href="form" name="attention" type="submit">View Full Article</button>
+    <br>
+    <hr style="height:4px;border-width:10;color:gray;background-color:#1F084F">
+
+    <article class="blog-post">
+        <h2 class="blog-post-title">You Only Look Once: Unified, Real-Time Object Detection</h2>
+        <p class="blog-post-meta">December 8, 2015 by <a href="#">Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi</a></p>
+
+        <p>We present YOLO, a new approach to object detection. Prior work on object detection repurposes classifiers to perform detection. Instead, we frame object detection as a regression problem to spatially separated bounding boxes and associated class probabilities. A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation. Since the whole detection pipeline is a single network, it can be optimized end-to-end directly on detection performance.
+Our unified architecture is extremely fast. Our base YOLO model processes images in real-time at 45 frames per second. A smaller version of the network, Fast YOLO, processes an astounding 155 frames per second while still achieving double the mAP of other real-time detectors. Compared to state-of-the-art detection systems, YOLO makes more localization errors but is far less likely to predict false detections where nothing exists. Finally, YOLO learns very general representations of objects. It outperforms all other detection methods, including DPM and R-CNN, by a wide margin when generalizing from natural images to artwork on both the Picasso Dataset and the People-Art Dataset..</p>
+        
+    </article>
+    <button class="btn btn-outline-primary" href="form" name="yolo" type="submit">View Full Article</button>
+
+    <br>
+    <hr style="height:4px;border-width:10;color:gray;background-color:#1F084F">
+
+    <article class="blog-post">
+        <h2 class="blog-post-title">Sequence to Sequence Learning with Neural Networks</h2>
+        <p class="blog-post-meta">September 10, 2014 by <a href="#">Ilya Sutskever, Oriol Vinyals, Quoc V. Le</a></p>
+
+        <p>Deep Neural Networks (DNNs) are powerful models that have achieved excellent performance on difficult learning tasks. Although DNNs work well whenever large labeled training sets are available, they cannot be used to map sequences to sequences. In this paper, we present a general end-to-end approach to sequence learning that makes minimal assumptions on the sequence structure. Our method uses a multilayered Long Short-Term Memory (LSTM) to map the input sequence to a vector of a fixed dimensionality, and then another deep LSTM to decode the target sequence from the vector. Our main result is that on an English to French translation task from the WMT'14 dataset, the translations produced by the LSTM achieve a BLEU score of 34.8 on the entire test set, where the LSTM's BLEU score was penalized on out-of-vocabulary words. Additionally, the LSTM did not have difficulty on long sentences. For comparison, a phrase-based SMT system achieves a BLEU score of 33.3 on the same dataset. When we used the LSTM to rerank the 1000 hypotheses produced by the aforementioned SMT system, its BLEU score increases to 36.5, which is close to the previous best result on this task. The LSTM also learned sensible phrase and sentence representations that are sensitive to word order and are relatively invariant to the active and the passive voice. Finally, we found that reversing the order of the words in all source sentences (but not target sentences) improved the LSTM's performance markedly, because doing so introduced many short term dependencies between the source and the target sentence which made the optimization problem easier.</p>
+        
+    </article>
+    <button class="btn btn-outline-primary" href="form" name="seq2seq" type="submit">View Full Article</button>
+    </form>
+
+    
+      
+</div>
+
+
+{% endblock Body %}
